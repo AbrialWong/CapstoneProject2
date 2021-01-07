@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This the title</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Overall Stylesheet & Javascript-->
+    <link href="../css/overall_stylesheet.css" rel="stylesheet" />
+    <script src="../js/overall_script.js"></script>
+
+    <!-- JQuery Javascript-->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+
+</head>
+
+<body>
+       
+    <!---------------------------Header, Navbar, links----------------------------------->
+    <!-- Search/Login, Sign Up, Navbar links-->
+    <nav class="header container-fluid navbar-fixed-top">
+        <ul class=" nav navbar-nav">
+            <li><a href="index.html" class="links">Home</a></li>
+            <li><a href="#" class="links">Students</a></li>
+            <li><a href="instructors.html" class="links text-decoration-none">Instructors</a></li>
+            <li><a href="courses.html" class="links text-decoration-none">Courses</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="links"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#" class="links"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="#" class="links"><span class="glyphicon glyphicon-search"></span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Logo Here / Header-->
+    <div class="container-fluid ">
+        <a class="navbar-brand" href="#">Contoso University</a>
+    </div>
+
+    <!------------------------------ Content Here-------------------------------------->
+    <div class="container">
+        <br />
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Student ID</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Admission Date</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+          
+            <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td><button type="button" class="glyphicon glyphicon-pencil" data-toggle="modal"></button></td>
+                <td><button type="button" class="glyphicon glyphicon-remove-circle" data-toggle="modal"></button></td>
+
+            </tr>
+         
+        </table>
+
+        <!--<button type="button" class="model_form btn btn-default" data-toggle="modal">Create Student</button>--> <!-- Button to create student-->
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Create Student</button>  <!--Button to create student-->
+        <!-- Create Student Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!--Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Create New Student</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="txtId" class="col-sm-3 control-label">Student ID</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="txtID" name="txtID" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="txtName" class="col-sm-3 control-label">Name:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Student Name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="txtAdmissionDate" class="col-sm-3 control-label">Admission Date</label>
+                            <div class="col-sm-9">
+                                <input type="date" class="form-control" id="txtAdmissionDate" name="txtAdmissionDate" placeholder="Admission Date" required>
+                            </div>
+                        </div>
+                        <input type="button" class="btnModal" value="Create" onclick="CreateStudent()" />
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Student Modal -->
+        <div id="edit_Modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <i class="icon-paragraph-justify2"></i>
+                            <span id="pop_title">Edit</span>
+                        </h4>
+                    </div>
+                    <!-- Form inside modal -->
+                    <form method="post" id="editModal">
+                        <div class="modal-body with-padding">
+
+                            <div class="form-group">
+                                <label for="txtId" class="col-sm-3 control-label">Student ID</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="studId" name="txtID" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group required">
+                                <label for="txtName" class="col-sm-3 control-label">Name:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="studName" name="txtName" placeholder="Student Name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group required">
+                                <label for="txtAdmissionDate" class="col-sm-3 control-label">Admission Date</label>
+                                <div class="col-sm-9">
+                                    <input type="date" class="form-control" id="studAdmissionDate" name="txtAdmissionDate" placeholder="Admission Date" required>
+                                </div>
+                            </div>
+                            <input type="button" class="btnModal" value="Update" onclick="UpdateStudent()" />
+                        </div>
+                        <!--<div class="modal-footer">
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                            <span id="add">
+                                <input type="hidden" name="id" value="" id="id">
+                                <button type="submit" name="form_data" class="btn btn-primary">Submit</button>
+                            </span>
+                        </div>-->
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /form modal -->
+
+    </div>
+    <br /><br />
+    <!------------------------------ Footer Here-------------------------------------->
+    <div id="footer" class="container-fluid">
+        <div class="left-footer nav navbar-nav">
+            <p>
+                <a href="index.html" class="footer-links">Home</a><br />
+                <a href="#" class="footer-links">Students</a><br />
+                <a href="instructors.html" class="footer-links">Instructors</a><br />
+                <a href="courses.html" class="footer-links">Courses</a><br />
+            </p>
+        </div>
+
+        <div class="center-footer">
+            <p class="followus">
+                Follow Us:<br />
+                <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <p style="margin-left:120px;">&copy; AbrialWong2020. | All Rights Reserved.</p>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!--
+green: #9BDEAC
+beige: #F7F5DD
+-->

@@ -1,0 +1,147 @@
+﻿/*Css Codes for Overall Page*/
+
+/*-- -------------------------Header--------------------------------------------- */
+/* NavBar Setting*/
+.navbar-brand {
+    font-family: Forte;
+    font-size: 40px;
+    color: black;
+    height: 60px;
+    margin-top: 70px;
+}
+.links, .navbar-text, .nav {
+    color: #F7F5DD;
+}
+.header {
+    background-color: #9BDEAC;
+    height: 50px;
+}
+
+/*-- -------------------------Content--------------------------------------------- */
+/*Slideshow settings*/
+.carousel-inner img {
+    height: 20px;
+    margin: auto;
+}
+.carousel-caption h3 {
+    color: white !important;
+}
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+/*Count Number of Student*/
+#CountStudent {
+    border-style: none;
+    background-color: #6c9b83;
+    width: 250px;
+    height: auto;
+    margin-left: 200px;
+    color: #F7F5DD;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.countStudent {
+    margin-top: 10px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+/*Count Number of Instructor*/
+#CountInstructor {
+    border-style: none;
+    background-color: #6c9b83;
+    width: 250px;
+    height: auto;
+    margin-left: 30px;
+    color: #F7F5DD;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.countInstructor {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/*Count Number of Course*/
+#CountCourse {
+    border-style: none;
+    background-color: #6c9b83;
+    width: 250px;
+    height: auto;
+    margin-left: 30px;
+    color: #F7F5DD;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.countCourse {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/* Misc */
+hr {
+    border: 0.1px solid #9BDEAC;
+}
+.btn {
+    background-color: #6c9b83;
+    color: #F7F5DD;
+    margin-left: 1020px;
+}
+.btnModal {
+    background-color: #6c9b83;
+    color: #F7F5DD;
+}
+
+
+/*-- -------------------------Footer--------------------------------------------- */
+/*Footer Setting*/
+#footer {
+    background-color: #9BDEAC;
+    color: #F7F5DD;
+    margin-top: 15px;
+}
+.center-footer {
+    text-align: center;
+}
+.left-footer {
+    margin-left: 10px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.followus {
+    font-size: 15px;
+    margin-top: 5px;
+}
+.contactus {
+    margin-top: 10px;
+    font-size: 15px;
+}
+.footer-links {
+    color: #F7F5DD;
+}
+.footer-links:hover {
+        text-decoration: none;
+    }
+
+/*Social Media icons*/
+.fa-facebook {
+    font-size: 14px;
+    color: #F7F5DD;
+}
+.fa-instagram {
+    font-size: 14px;
+    color: #F7F5DD;
+}
+.fa-twitter {
+    font-size: 14px;
+    color: #F7F5DD;
+}
+.fa-facebook:hover, .fa-twitter:hover, .fa-instagram:hover {
+        text-decoration: none;
+    }

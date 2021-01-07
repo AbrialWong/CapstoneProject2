@@ -1,0 +1,12 @@
+﻿CACHE MANIFEST
+   
+CACHE:
+Lesson1.html
+Lesson2.html
+
+NETWORK:
+Lesson12http.html
+   
+# alternatives paths
+FALLBACK:
+Lesson2.html
